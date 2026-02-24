@@ -29,11 +29,6 @@ def analyze_file():
     text_box.insert(tk.END, "Numero totale di segni di punteggiatura (. , ; : ! ?): " + str(punt) + "\n")
     text_box.insert(tk.END, "Numero totale di spazi: " + str(spazi) + "\n")
 
-#layout: label che salva il percorso al file
-#bottone a destra del label per selezionare il percorso
-#bottone sotto per avviare l'analisi del file
-#textbox che mostra i risultati della precedente analisi
-
 root = tk.Tk()
 root.title("Analisi file txt")
 root.geometry("500x400")
