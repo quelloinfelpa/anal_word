@@ -52,15 +52,15 @@ def analyze_file():
         if frequenze[w] > frequenze[most_frequent]:
             most_frequent = w
     
-    text_box.config(state=tk.NORMAL)
     text_box.delete(1.0, tk.END)
     text_box.insert(tk.END, "Numero totale di caratteri: " + str(count) + "\n")
     text_box.insert(tk.END, "Numero totale di segni di punteggiatura (. , ; : ! ?): " + str(punt) + "\n")
     text_box.insert(tk.END, "Numero totale di spazi: " + str(spazi) + "\n")
-    text_box.insert(tk.END, "Numero totale di parole " + str(clean_words.__len__()) + "\n")
-    text_box.insert(tk.END, "Parola più lunga " + str(longest) + "\n")
-    text_box.insert(tk.END, "Parola più corta " + str(shortest) + "\n")
-    text_box.insert(tk.END, "Parola più frequente " + str(most_frequent) + "\n")
+    text_box.insert(tk.END, "Numero totale di parole: " + str(clean_words.__len__()) + "\n")
+    text_box.insert(tk.END, "Parola più lunga: " + str(longest) + "\n")
+    text_box.insert(tk.END, "Parola più corta: " + str(shortest) + "\n")
+    text_box.insert(tk.END, "Parola più frequente: " + str(most_frequent) + "\n")
+
 
 root = tk.Tk()
 root.title("Analisi file txt")
@@ -77,7 +77,7 @@ button_analyze.pack()
 
 text_box = tk.Text(root)
 text_box.insert(tk.END, "Risultati dell'analisi del file")
-text_box.config(state=tk.DISABLED)
+text_box.config(state="readonly")
 text_box.pack()
 
 
